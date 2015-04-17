@@ -1,0 +1,4 @@
+Things i don't understand:
+Why class HelloWorld inherits from object, and WTF is "object" in python (a class?).
+WTF is a decorator.
+WTF is __main__, __init__, the self parameter, and when to use them.
