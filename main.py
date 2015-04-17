@@ -6,7 +6,7 @@ STATIC_DIR = os.path.join(os.getcwd(), 'public')
 class CherryClicker(object):
 	@cherrypy.expose
 	def index(self):
-		cherrypy.response.headers['Content-Type']= 'text/html'
+		cherrypy.response.headers['Content-Type'] = 'text/html'
 		return '(index page goes here)<br />' + \
 		'<a href="hello.txt">link to static file</a>'
 
@@ -17,7 +17,7 @@ conf = {
 	'/': {
 		'tools.staticdir.on' : True,
 		'tools.staticdir.dir' : STATIC_DIR,
-		'tools.staticdir.index' : 'index.html'}
+	}
 }
 
-cherrypy.quickstart(CherryClicker(), config = conf)
+cherrypy.quickstart(CherryClicker(), config=conf)
