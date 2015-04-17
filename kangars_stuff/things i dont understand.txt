@@ -2,3 +2,7 @@ Things i don't understand:
 Why class HelloWorld inherits from object, and WTF is "object" in python (a class?).
 WTF is a decorator.
 WTF is __main__, __init__, the self parameter, and when to use them.
+__name__ - contains the name of the module that runs that code. 
+So, "if __name__ == '__main__'" checks whether the code inside the module
+In my case- my python file is actually a module if imported by 
+another python file.
