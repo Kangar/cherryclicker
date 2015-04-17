@@ -22,7 +22,7 @@ conf = {
 	'/': {
 		'tools.staticdir.on' : True,
 		'tools.staticdir.dir' : STATIC_DIR,
-		'tools.staticdir.index' : 'index.html'}
+	}
 }
 
-cherrypy.quickstart(CherryClicker(), config = conf)
+cherrypy.quickstart(CherryClicker(), config=conf)
