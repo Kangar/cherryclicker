@@ -14,5 +14,6 @@ var coinSound = loadSound('audio/coin.wav')
 
 $('#thebutton').click(function() {
 	incrementScore();
+	coinSound.currentTime = 0;
 	coinSound.play();
 });
