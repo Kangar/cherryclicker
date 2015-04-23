@@ -1,14 +1,14 @@
 import cherrypy
 import os
 
-STATIC_DIR = os.path.join(os.getcwd(), 'public')
+STATIC_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'public')
 
 class CherryClicker(object):
 	@cherrypy.expose
 	def index(self):
 		cherrypy.response.headers['Content-Type'] = 'text/html'
-		return '(index page goes here)<br />' + \
-		'<a href="hello.txt">link to static file</a>'
+		with open(os.path.join(STATIC_DIR, 'index.html')) as f:
+			return f.read()
 
 	@cherrypy.expose
 	def mypage(self):
